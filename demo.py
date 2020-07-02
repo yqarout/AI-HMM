@@ -12,8 +12,8 @@ from aihmm_train_model import train_aihmm
 # =============================================================================
 
 # Import data and map datetime values
-data = pd.read_csv('Dodgers.data', header = None)
-labels = pd.read_csv('Dodgers.events', header = None, usecols = [0,1,2,3,4])
+data = pd.read_csv('data/Dodgers.data', header = None)
+labels = pd.read_csv('data/Dodgers.events', header = None, usecols = [0,1,2,3,4])
 date = data[0].map(lambda x: dt.datetime.strptime(str(x), '%m/%d/%Y %H:%M').date())
 time = data[0].map(lambda x: dt.datetime.strptime(str(x), '%m/%d/%Y %H:%M').time())
 hour = time.map(lambda x: x.hour)
