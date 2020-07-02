@@ -112,7 +112,7 @@ def makeDesignMatrix(Y, order):
     
     return X, valid
 
-def compute_likelihood(data_struct, theta, K):
+def compute_ar_likelihood(data_struct, theta, K):
     """
     Computes the likelihood of input data, stored in data_struct, given state parameters theta and state number K
     """
