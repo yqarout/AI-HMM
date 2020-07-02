@@ -1,3 +1,4 @@
+import numpy as np
 def switching_ar_utils_update_stats(data_struct, ind_struct, N):
     """
     
