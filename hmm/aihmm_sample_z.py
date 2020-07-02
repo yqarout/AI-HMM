@@ -1,3 +1,6 @@
+import numpy as np
+from aihmm_likelihood import compute_likelihood
+
 def sample_z(data_struct, trans_par, theta, valid_tau):
     """
     
@@ -77,7 +80,7 @@ def sample_z(data_struct, trans_par, theta, valid_tau):
     
     z = np.zeros(T, dtype = 'int')
     
-    likelihood = utils_compute_likelihood(data_struct, theta, K)
+    likelihood = compute_likelihood(data_struct, theta, K)
     
     bwds_msg, partial_marg = backwards_message_vec(likelihood, T, K, pi_z, valid_tau)
     
@@ -115,3 +118,17 @@ def sample_z(data_struct, trans_par, theta, valid_tau):
         trans_counts[tau]['N'] = N[tau]
     
     return state_ind, ind_struct, trans_counts, likelihood 
+
+def backwards_message_vec(likelihood, T, K, pi_z, valid_tau):    
+    bwds_msg = np.ones([K,T])
+    partial_marg = np.zeros([K,T])
+        
+    for tt in np.arange(T-2,-1,-1):
+        partial_marg[:,tt+1] = np.multiply(likelihood[:,tt+1], bwds_msg[:,tt+1])
+        bwds_msg[:,tt] = np.dot(pi_z[valid_tau[tt+1]], partial_marg[:,tt+1])
+        bwds_msg[:,tt] = bwds_msg[:,tt] / sum(bwds_msg[:,tt])
+        
+    partial_marg[:,0] = np.multiply(likelihood[:,0], bwds_msg[:,0])
+    
+    return bwds_msg, partial_marg    
+
