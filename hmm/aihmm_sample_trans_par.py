@@ -1,7 +1,7 @@
 import numpy as np
 from utils import randgen_dirichlet
 
-def switching_ar_sample_trans_par(trans_counts, hyperparams, lamb):
+def sample_trans_par(trans_counts, hyperparams, lamb):
     """
     
     Samples transition matrix and middle level DP mixing weights for the underlying 
