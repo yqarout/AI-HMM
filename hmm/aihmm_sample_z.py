@@ -1,4 +1,4 @@
-def switching_ar_sample_z(data_struct, trans_par, theta, valid_tau):
+def sample_z(data_struct, trans_par, theta, valid_tau):
     """
     
     Samples the state indicator variables z which denotes the state that 
