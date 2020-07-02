@@ -46,7 +46,7 @@ def train_aihmm(Y, tau, model, K, Niter):
         for l in unique_tau:
             trans_par[l] = sample_trans_par(trans_counts[l], prior_HMM_params, trans_par['lambda'])
 
-        update_stats = update_stats(data_struct, ind_struct, concat_N)
+        update_stats = update_stats_f(data_struct, ind_struct, concat_N)
         theta = sample_theta(theta, update_stats, prior_params)
         state_ind_store[n] = state_ind['z']
         AR_params[n] = theta
