@@ -79,8 +79,7 @@ model['HMMmodel']['params']['psi'] = 10000
 
 # Test model
 Niter = 100
-state_ind_store, concat_likelihood, AR_params, trans_par = \
-segmentation_switching_ar(Y, tau, model, K, Niter)
+state_ind_store, concat_likelihood, AR_params, trans_par = train_aihmm(Y, tau, model, K, Niter)
 
 # Extract state indicator variables z and remove states with very few points clustered
 # corrosponding to outliers for better visualisation
