@@ -1,4 +1,7 @@
-def switching_ar_sample_theta(theta, update_stats, prior_params):
+import numpy as np
+from utils import randgen_invwishart
+from utils import randgen_matrixNormal
+def sample_theta(theta, update_stats, prior_params):
     """
     Samples the state parameters A, mu and invSigma which specify the state
     specific autoregressive processes. A containes the AR coefficients, mu is
@@ -36,11 +39,11 @@ def switching_ar_sample_theta(theta, update_stats, prior_params):
     
     Outputs: theta       -  updated theta dictionary
 
-    Copyright 2019 Yazan Qarout
+    CC BY-SA 3.0 Attribution-Sharealike 3.0 Yazan Qarout and Y.P. Raykov
     If you use this code in your research, please cite:
     Qarout, Y.; Raykov, Y.P.; Little, M.A. 
     Probabilistic Modelling for Unsupervised Analysis of Human Behaviour in Smart Cities. 
-    Sensors 2020, 20, 784.             
+    Sensors 2020, 20, 784.            
 
     """
     
@@ -109,44 +112,3 @@ def switching_ar_sample_theta(theta, update_stats, prior_params):
     theta['mu'] = mu
     
     return theta
-
-def randgen_invwishart(sigma, df):
-    """
-    Generate samples from inverse Wishart distribution with scale matrix sigma 
-    and degrees of freedom df
-    
-    Inputs:  sigma   - nxn square scale matrix parameter for the inverse Wishart
-                      distribution
-             df      - a scalar which must satisfies df > n-1, denoting the
-                      degrees of the inverse Wishart distribution
-                      
-    Outputs: sqrtx    - nxn elementwise square root matrix of the random invWishart 
-             sqrtinvx - nxn elementwise square root of the inverse of sqrtx (i.e. Wishart random sample)
-    """
-    
-    n = sigma.shape[0]
-    if df < n:
-        raise ValueError('randwish: Bad df, Degrees of freedom must be no smaller than dimesion of sigma')
-    
-    di = np.linalg.inv(np.linalg.cholesky(sigma).T)
-    
-    cholX = np.triu(np.random.randn(n,n))*np.sqrt(0.5)
-    a = (df/2) - np.arange(n)*0.5
-    gam = np.sqrt(sp.random.gamma(a)) 
-    I = np.eye(cholX.shape[0], dtype = 'bool')
-    cholX[I] = gam
-    
-    sqrtinvx =  np.sqrt(2)*np.dot(cholX,di)
-    sqrtx = np.linalg.inv(sqrtinvx).T
-    
-    return sqrtx, sqrtinvx
-    
-def randgen_matrixNormal(M, sqrtV, sqrtinvK):
-    """
-    Generates samples from a matrix Gaussian distribution with parameters: mean M, column scale sqrtV and row scale sqrtinvK 
-    """
-    mu = M.ravel()
-    sqrtsigma = np.kron(sqrtinvK, sqrtV)
-    A = (mu + np.dot(sqrtsigma.T, np.random.randn(len(mu),1)).ravel()).reshape(M.shape)
-    
-    return A
