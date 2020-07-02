@@ -1,5 +1,5 @@
 import numpy as np
-from aihmm_likelihood import compute_likelihood
+from utils import compute_ar_likelihood
 
 def sample_z(data_struct, trans_par, theta, valid_tau):
     """
@@ -80,7 +80,7 @@ def sample_z(data_struct, trans_par, theta, valid_tau):
     
     z = np.zeros(T, dtype = 'int')
     
-    likelihood = compute_likelihood(data_struct, theta, K)
+    likelihood = compute_ar_likelihood(data_struct, theta, K)
     
     bwds_msg, partial_marg = backwards_message_vec(likelihood, T, K, pi_z, valid_tau)
     
