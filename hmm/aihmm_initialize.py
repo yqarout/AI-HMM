@@ -1,6 +1,6 @@
 import numpy as np
 import makeDesignMatrix from utils
-def aihmm_utils_initialize(prior_params, Y, K, tau):
+def initialize(prior_params, Y, K, tau):
     """
      
     Initialize structures storing the model parameters and efficient
