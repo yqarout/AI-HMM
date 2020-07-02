@@ -1,5 +1,5 @@
 import numpy as np
-import makeDesignMatrix from utils
+from utils import makeDesignMatrix
 def initialize(prior_params, Y, K, tau):
     """
      
