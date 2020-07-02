@@ -6,7 +6,7 @@ from aihmm_sample_trans_par import sample_trans_par
 from aihmm_sample_theta import sample_theta
 from aihmm_sample_z import sample_z
 from aihmm_sample_tables import sample_tables
-from aihmm_update_stats import update_stats
+from aihmm_update_stats import update_stats_f
 
 def train_aihmm(Y, tau, model, K, Niter):
     unique_tau = np.unique(tau)
