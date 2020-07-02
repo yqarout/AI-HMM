@@ -1,5 +1,5 @@
 import numpy as np
-def update_stats(data_struct, ind_struct, N):
+def update_stats_f(data_struct, ind_struct, N):
     """
     
     Update the sufficient statistics for each state to speed up the sampling
