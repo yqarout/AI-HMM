@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import datetime as dt
 from matplotlib.ticker import MaxNLocator
 
-from segmentation_switching_ar import segmentation_switching_ar
+from aihmm_train_model import train_aihmm
 
 # =============================================================================
 # Data extraction and wrangling
