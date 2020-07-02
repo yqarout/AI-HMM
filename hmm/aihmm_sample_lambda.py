@@ -1,4 +1,6 @@
 import numpy as np
+from utils import randgen_dirichlet
+
 def sample_lambda(hyperparams, M):
     """   
     Sample the upper level mixing parameter lambda
