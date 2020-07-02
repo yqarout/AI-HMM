@@ -1,4 +1,5 @@
-def switching_ar_sample_tables(trans_counts, hyperparams, beta_vec, K):   
+import numpy as np
+def sample_tables(trans_counts, hyperparams, beta_vec, K):   
     """
     
     Sample counts of new transitions that were unobserved previously in the 
