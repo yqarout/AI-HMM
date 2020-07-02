@@ -1,5 +1,5 @@
 import numpy as np
-def switching_ar_utils_update_stats(data_struct, ind_struct, N):
+def aihmm_utils_update_stats(data_struct, ind_struct, N):
     """
     
     Update the sufficient statistics for each state to speed up the sampling
