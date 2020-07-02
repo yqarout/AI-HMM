@@ -8,7 +8,7 @@ def sample_theta(theta, update_stats, prior_params):
     the AR offset parameter and invSigma is the inverse of the AR process
     noise
 
-    Inputs: theta        -  a dictyonary that contains the state parameters: 
+    Inputs: theta        -  a dictionary that contains the state parameters: 
                             theta['invSigma'] is dxdxK matrix containing the state specific 
                             AR process noise; theta['A'] is 1xrxK matrix
                             containing the state spacific AR coefficients; 
