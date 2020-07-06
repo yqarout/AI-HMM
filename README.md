@@ -11,10 +11,11 @@ The AI-HMM is a flexible latent space model that to account for various types of
 
 # Modeling Examples - Synthetic Data
 
+Below is an image demonstrating the the performance of the AI-HMM at estimating the transition matrix on synthetic data. Given data generated from 2 different transition matrices (Π<sub>1</sub> and Π<sub>2</sub> actual), the model is capable of reproducing the transitions matrices (Π<sub>1</sub> and Π<sub>2</sub> estimated) with high accuracy.
+
 <img width="671" alt="Screen Shot 2020-07-06 at 17 41 25" src="https://user-images.githubusercontent.com/67744584/86618285-8c774f00-bfb0-11ea-9217-299cb57af781.png">
 
-
-
+To compare, the conventional HDP-AR-HMM can only reproduce a single transition matrix (Π<sub>HDP-AR-HMM</sub>)
 
 <img width="329" alt="Screen Shot 2020-07-06 at 17 41 58" src="https://user-images.githubusercontent.com/67744584/86618820-74ec9600-bfb1-11ea-90e7-c4b5284313cf.png">
 
