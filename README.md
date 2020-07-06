@@ -19,3 +19,12 @@ To compare, the conventional HDP-AR-HMM can only reproduce a single average tran
 
 <img width="329" alt="Screen Shot 2020-07-06 at 17 41 58" src="https://user-images.githubusercontent.com/67744584/86618820-74ec9600-bfb1-11ea-90e7-c4b5284313cf.png">
 
+# Modeling Examples - Real Data
+
+The code in this repository clsuters the time series data from the Dodgers loop dataset containing loop sensor data counting the number of vehicles that pass through the Glendale on-ramp for the 101 North Freeway in Los Angeles in 5 min (288 reading per day) intervals over a period of 25 weeks. The dataset contains weekday morning and afternoon traffic-peak trends and a baseball stadium in the vicinity of the ramp allowing for the observation of the post-game traffic rise.The code uses the added input variable to differentiate between weekday and weekend trends. An example of the results that can be obtained from the demo can be seen below.
+
+
+
+Each colour represents a specific state that the respective observations was clustered into. Morning and evening traffic peaks on weekdays are clustered into state 1 (blue) and state 3 (green), respectively. Traffic caused by evening baseball games near 23:00 (Wednesday, Friday and Saturday) have been clustered into state 6 (brown), whereas traffic peaks caused by afternoon games at about 16:30 (Sunday) were clustered into state 7 (pink).
+
+For questions and enquiries please email yazan.qarout@gmail.com
