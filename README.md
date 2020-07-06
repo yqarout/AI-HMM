@@ -15,7 +15,7 @@ Below is an image demonstrating the the performance of the AI-HMM at estimating 
 
 <img width="671" alt="Screen Shot 2020-07-06 at 17 41 25" src="https://user-images.githubusercontent.com/67744584/86618285-8c774f00-bfb0-11ea-9217-299cb57af781.png">
 
-To compare, the conventional HDP-AR-HMM can only reproduce a single transition matrix (Π<sub>HDP-AR-HMM</sub>)
+To compare, the conventional HDP-AR-HMM can only reproduce a single average transition matrix (Π<sub>HDP-AR-HMM</sub>) by design.
 
 <img width="329" alt="Screen Shot 2020-07-06 at 17 41 58" src="https://user-images.githubusercontent.com/67744584/86618820-74ec9600-bfb1-11ea-90e7-c4b5284313cf.png">
 
