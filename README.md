@@ -1,3 +1,7 @@
+Copyright 2019 Yazan Qarout \
+If you use this code in your research, please cite: \
+Qarout, Y.; Raykov, Y.P.; Little, M.A. Probabilistic Modelling for Unsupervised Analysis of Human Behaviour in Smart Cities. Sensors 2020, 20, 784. 
+
 # Adaptive Input infinite Hidden Markov Model (AI-HMM)
 Implementation of the novel Adaptive Input infinite Hidden Markov Model (AI-HMM), a Bayesian nonparametric hidden Markov model which can leverage discrete contextual variables. Conventional HMMs are good at discovering interpretative time series clusters, AI-HMMs allow for HMMs to leverage additional discrete inputs, such as time of day and learn different transition dynamics for each additional category of context.
 
@@ -6,4 +10,9 @@ The AI-HMM is a flexible latent space model that to account for various types of
 ![aihmm](https://user-images.githubusercontent.com/67744584/86615324-37d1d500-bfac-11ea-8497-60f3ecec6b11.png)
 
 # Modeling Examples - Synthetic Data
+
+<img width="671" alt="Screen Shot 2020-07-06 at 17 41 25" src="https://user-images.githubusercontent.com/67744584/86618285-8c774f00-bfb0-11ea-9217-299cb57af781.png">
+
+
+
 
