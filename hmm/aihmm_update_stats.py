@@ -1,4 +1,5 @@
 import numpy as np
+
 def update_stats_f(data_struct, ind_struct, N):
     """
     
