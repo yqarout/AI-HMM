@@ -34,9 +34,9 @@ Note: if only one unique indicator variable tau is given, the model simplifies t
 
 ## Authors
 
-Yazan Qarout: theory development, coding, testing \
-Yordan P. Raykov: supervision, code validation \
-Max A. Little: supervision
+**Yazan Qarout -** theory development, coding, testing \
+**Yordan P. Raykov -** supervision, code validation \
+**Max A. Little -** supervision
 
 
 ## Model Desctiption
