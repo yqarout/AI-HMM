@@ -1,6 +1,7 @@
 import numpy as np
 from utils import randgen_invwishart
 from utils import randgen_matrixNormal
+
 def sample_theta(theta, update_stats, prior_params):
     """
     Samples the state parameters A, mu and invSigma which specify the state
