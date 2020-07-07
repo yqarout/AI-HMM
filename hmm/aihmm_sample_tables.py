@@ -1,4 +1,5 @@
 import numpy as np
+
 def sample_tables(trans_counts, hyperparams, beta_vec, K):   
     """
     
