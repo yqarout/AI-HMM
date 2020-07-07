@@ -11,8 +11,16 @@ Download the folders 'hmm', 'data' and the file 'demo.py'. 'demo.py' is an examp
 
 ## Prerequisites
 
-<pre><code>Numpy
+The full code is written in Python and uses the following packages 
 
+<pre><code>numpy 1.16.2
+scipy 1.2.1
+matplotlib 3.0.3
+</code></pre>
+
+Additional packages needed for running the 'demo.py' file
+
+<pre><code>datetime
 </code></pre>
 
 
