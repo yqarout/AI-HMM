@@ -5,9 +5,9 @@ Qarout, Y.; Raykov, Y.P.; Little, M.A. Probabilistic Modelling for Unsupervised 
 # Adaptive Input infinite Hidden Markov Model (AI-HMM)
 Implementation of the novel Adaptive Input infinite Hidden Markov Model (AI-HMM), a Bayesian nonparametric hidden Markov model which can leverage discrete contextual variables. Conventional HMMs are good at discovering interpretative time series clusters, AI-HMMs allow for HMMs to leverage additional discrete inputs, such as time of day and learn different transition dynamics for each additional category of context.
 
-# Gettung Started
+## Getting Started
 
-Download the 
+Download the folders 'hmm', 'data' and the file 'demo.py'. 'demo.py' is an example of the code on the data available in the folder 'data'. Folder 'hmm' contains the main functions for the AI-HMM which will be called upon in 'demo.py'.
 
 
 
