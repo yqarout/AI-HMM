@@ -37,7 +37,7 @@ Note: if only one unique indicator variable tau is given, the model simplifies t
 
 **Yazan Qarout -** main contributer, manuscript and code preparation \
 **Yordan P. Raykov -** conceptual contributions, supervision, manuscript and code preparation\
-**Max A. Little -** conceptual contributions, project supervision
+**Max A. Little -** conceptual contributions, project supervision, manuscript preparation
 
 
 ## Model Desctiption
